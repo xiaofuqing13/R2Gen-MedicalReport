@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# macOS
+.DS_Store
+._*
+
+# 模型权重（体积过大）
+*.pth
+*.pt
+*.ckpt
+
+# 数据集（体积过大）
+data/
+
+# 输出
+runs/
+*.log
