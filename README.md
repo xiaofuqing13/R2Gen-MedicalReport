@@ -18,17 +18,30 @@
 
 ## 效果展示
 
-![GUI 界面演示](docs/gui-demo.png)
+### GUI 操作界面
+![GUI 界面](docs/gui-demo.png)
 
 上传 X 光胸片后，系统自动分析影像并生成包含影像描述和诊断意见的放射学报告。
 
+### 注意力热力图
+![注意力热力图](docs/attention-heatmap.png)
+
+可视化模型在生成报告时对图像各区域的关注程度，红色区域表示模型重点关注的病变位置。
+
+### 训练过程
+![训练指标](docs/training-metrics.png)
+
+训练损失曲线和 BLEU-4 评估指标的变化趋势，展示模型收敛过程。
+
 ## 核心功能
 
-- **自动报告生成：** 输入胸部 X 光片，自动生成文本诊断报告
-- **GUI 操作界面：** PyQt5 桌面应用，上传图片即可查看分析结果
-- **模型训练：** 支持在 IU X-Ray 和 MIMIC-CXR 数据集上训练
-- **注意力可视化：** 绘制模型对图像区域的关注度热力图
-- **临床指标评估：** 计算 CheXpert/CheXbert 临床效果指标
+| 功能 | 说明 |
+|------|------|
+| 自动报告生成 | 输入胸部 X 光片，自动生成文本诊断报告 |
+| GUI 操作界面 | PyQt5 桌面应用，上传图片即可查看分析结果 |
+| 注意力可视化 | 绘制模型对图像区域的关注度热力图 |
+| 模型训练 | 支持在 IU X-Ray 和 MIMIC-CXR 数据集上训练 |
+| 临床指标评估 | 计算 CheXpert/CheXbert 临床效果指标 |
 
 ## 项目结构
 
@@ -45,20 +58,16 @@ R2Gen-MedicalReport/
 ├── pycocoevalcap/              # 报告评估指标（BLEU、METEOR 等）
 ├── results/                    # 测试结果输出
 ├── train_iu_xray.sh            # IU X-Ray 训练脚本
-├── test_iu_xray.sh / .bat      # IU X-Ray 测试脚本
-└── .gitignore
+└── test_iu_xray.sh / .bat      # IU X-Ray 测试脚本
 ```
 
 ## 快速开始
-
-**环境要求：** Python 3.7+、PyTorch 1.7+、CUDA（推荐 GPU 训练）
 
 ```bash
 # 安装依赖
 pip install torch==1.7.1 torchvision==0.8.2 opencv-python PyQt5 Pillow
 
-# 下载数据集
-# IU X-Ray: 放入 data/iu_xray/ 目录（详见原论文链接）
+# 下载数据集（IU X-Ray: 放入 data/iu_xray/ 目录）
 
 # 训练模型
 bash train_iu_xray.sh
