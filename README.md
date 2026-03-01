@@ -1,5 +1,8 @@
 # R2Gen 医学影像报告生成
 
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-green)
+
+
 > 基于 Transformer + 记忆矩阵的胸部 X 光影像自动报告生成系统
 
 ## 项目目的
