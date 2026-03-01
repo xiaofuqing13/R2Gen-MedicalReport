@@ -25,7 +25,7 @@
 
 完整的图形界面展示，支持交互式诊断。
 
-![GUI界面](docs/gui_demo.png)
+![GUI界面](docs/gui-demo.png)
 
 ### 模型架构
 
@@ -37,7 +37,7 @@ R2Gen 采用视觉特征提取 + Transformer 编码器 + 记忆矩阵 + Transfor
 
 展示模型在生成报告时关注的影像区域热力图。
 
-![注意力热力图](docs/attention_heatmap.png)
+![注意力热力图](docs/attention-heatmap.png)
 
 ### 模型性能评估
 
@@ -49,7 +49,7 @@ R2Gen 采用视觉特征提取 + Transformer 编码器 + 记忆矩阵 + Transfor
 
 训练和验证集的 Loss、BLEU 指标收敛曲线。
 
-![训练曲线](docs/training_metrics.png)
+![训练曲线](docs/training-metrics.png)
 
 ## 技术架构
 
